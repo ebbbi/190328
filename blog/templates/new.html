@@ -1,0 +1,6 @@
+새 글
+
+<form method="POST" class="post-form"> {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">save</button>
+</form>

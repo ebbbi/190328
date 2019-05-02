@@ -1,0 +1,9 @@
+글 목록 <br><br>
+
+<a href="{% url 'new' %}">글 쓰기</a><br><br>
+{%for post in posts%}
+    <a href="{% url 'post_detail' index=post.pk %}">{{post.title}}</a><br>
+    {{post.pub_date}}<br>
+    {{post.body|linebreaks}}<br>
+    <hr>
+{% endfor %}
